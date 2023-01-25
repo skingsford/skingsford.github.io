@@ -1,0 +1,351 @@
+
+body {
+    background-color: #000;
+    background-image: url(img/stone-texture.jpg);
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+html * {
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    z-index: 1;
+}
+
+body, p, td, li {
+    color: #fff;
+    font-family: Lato, "HelveticaNeue-Light",
+    "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size:100%;
+}
+
+p {
+    margin: 3px 0 8px 0;
+}
+
+p.intro {
+    margin: 6px 10px 12px 10px;
+}
+
+.col-md-12 {
+    margin-top: 10px;
+}
+
+.main {
+    padding-bottom: 60px;
+}
+
+.row, .col-md-12 {
+    text-align: center !important;
+}
+.total {
+    position:absolute;
+    top:10px;
+    left:30%;
+    margin:0 auto;
+    width:35%;
+    text-align:center;
+    z-index:11;
+    font-size:1.4em;
+    font-weight:bold;
+    pointer-events: none;
+    white-space:nowrap;
+}
+.single img {
+    height: 28px;
+    width: auto;
+    margin: 5px auto 0 auto;
+}
+
+.col-md-3 {
+    text-align: center !important;
+    width: 30%;
+    display: inline-block;
+}
+
+.col-md-3 p {
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.col-md-3 img {
+    width: 100%;
+    margin: 3px auto;
+    float: none;
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 60%;
+    margin: 95px auto;
+}
+
+.noBreak {
+    white-space: nowrap;
+    line-height: 150%;
+}
+
+.col-md-3 input[type="checkbox"], .col-md-3 input[type="radio"] {
+    position: absolute;
+    margin: 2px 24px -2px -20px;
+    width: 17px;
+    height: 17px;
+}
+
+.ingredient label {
+    white-space: nowrap;
+}
+
+.spinput {
+    background-color: transparent;
+    border: 0 none;
+    width: 15px;
+    color: #fff;
+    text-align: left;
+    outline: none !important;
+}
+
+.minus {
+    color: #F00;
+    display: inline-block;
+    background-image: url(img/remove.png);
+    width: 17px;
+    height: 17px;
+    position: relative;
+    margin: 3px 0 -3px 3px;
+    cursor: pointer;
+}
+
+.mult {
+    display: inline-block;
+    white-space: nowrap;
+    padding-bottom: 6px;
+    cursor: pointer;
+}
+
+.exceed {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    margin-left: -125px;
+    width: 250px;
+    top: 20%;
+    font-size: 1.1em !important;
+    padding: 20px 15px 23px 15px;
+    background-color: #c00;
+    color: #fff;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.exceedClose {
+    text-decoration: underline;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.swipe {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.maccasLogo {
+    position: absolute;
+    width: 92px;
+    height: 84px;
+    top: 0;
+    left: 25%;
+    z-index: 10;
+}
+
+.ingredient label {
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked + label {
+    color: #f00 !important;
+    font-style: normal;
+}
+
+.headerBG, .footerBG {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    background-color: #000;
+    z-index: 2;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+    opacity: 0.4
+}
+
+.headerBG {
+    top: 0px;
+}
+
+.footerBG {
+    bottom: 0px;
+}
+
+.footerButtons {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background-color: transparent;
+    z-index: 3;
+    text-align: center;
+}
+
+.footerBtn {
+    display: inline-block;
+    height: 31px;
+    width: 108px;
+    background-color: #FC3;
+    margin: 8px 2px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 8px;
+    cursor: pointer;
+}
+
+.footerBtn:hover, .footerBtn:focus {
+    background-color: #FFF;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+/*.price {position:relative; margin:34% auto -34% auto; font-weight: bold}*/
+/*div {border:1px dotted #666;} Use this to see what's going on when div alignment doesn't work */
+.price {
+    height: 25px;
+    position: relative;
+    margin: 30% auto -36% auto;
+    font-size: 1.4em;
+    font-weight: bold;
+    pointer-events: none;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+}
+
+.unit {
+    display: none;
+}
+
+
+@media (max-width:1140px) {
+    .total {
+        left:34%;
+    }
+}
+@media (max-width:800px) {
+    .total {
+        left:32%;
+    }
+    .maccasLogo {
+        width:72px;
+        height:68px;
+        left:15%;
+    }
+    .wrapper {
+        width:80%;
+        margin:90px auto;
+    }
+}
+@media (max-width:600px) {
+    body, p, td {
+        font-size:1em;
+    }
+    .single img {
+        height:24px;
+    }
+    .col-md-3  input[type="checkbox"], .col-md-3  input[type="radio"] {
+        position:absolute;
+        margin:1px 22px -1px -18px;
+        width:15px;
+        height:15px;
+    }
+    .ingredient p strong {
+        padding-left:20px;
+    }
+    .col-md-3 {
+        text-align:center !important;
+        margin:3px 0;
+        width:45%;
+        display:inline-block;
+    }
+}
+@media (max-width:480px) {
+    .maccasLogo {
+        width:56px;
+        height:51px;
+        left:8%;
+    }
+    .ingredient input[type="checkbox"], .ingredient input[type="radio"] {
+        position:absolute;
+        margin:3px 0 -3px 0;
+        width:12px;
+        height:12px;
+    }
+    .ingredient p strong {
+        padding-left:16px;
+    }
+    .single img {
+        height:22px;
+    }
+    .swipe {
+        width:75%;
+        margin:0 auto;
+    }
+    .wrapper {
+        width:100%;
+        margin:60px auto;
+    }
+}
+
+@media (max-width:360px) {
+    .footerBtn {
+        width:98px;
+        font-size:11px;
+        padding-top:8px;
+        height:29px;
+    }
+}
+
+@media (min-width:600px) {
+    .ingredient {
+        min-width:170px !important;
+    }
+    .single img {
+        height:26px;
+    }
+    .slick-prev, .slick-next {
+        top: 60%;
+    }
+}
+@media (min-width:960px) {
+    .single img {
+        height:32px;
+    }
+    .slick-prev, .slick-next {
+        top: 40%;
+    }
+}
+
+
+@media (max-width:600px) {
+    .slick-prev, .slick-next {
+        top: 15%;
+    }
+}

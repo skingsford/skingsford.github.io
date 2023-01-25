@@ -1,0 +1,63 @@
+
+
+#header-2 .main-nav .navbar-nav > li a {
+    color: #9C8870;
+}
+#header-2 .main-nav .navbar-nav > li.active a
+{
+    color: #FF8800;
+}
+#header-2 .main-nav .navbar-nav > li a:hover
+{
+    color: #FF8800;
+}
+#header-2 .main-nav .nav .dropdown-menu a:hover
+{
+    background: #FF8800;
+    color: #fff;
+}
+#header-2 .main-nav .nav .dropdown-menu
+{
+    background: #3C2810;
+}
+.underlined-title h2, .underlined-title hr  {
+		display:none;
+}
+a:hover {
+    color: #FF8800;
+}
+.filter li a {
+    color: #9C8870;
+}
+.filter li a:hover, .filter l1.active a {
+    color: #FF8800 !important;
+}
+.filter li a:hover, .filter li a:focus, .filter li a.active {
+    color: #FF8800 !important;
+}
+.gallery-item .gallery-thumb .gallery-zoom, .gallery-item .gallery-thumb .gallery-link {
+    background: #3C2810;
+}
+.gallery-item .gallery-thumb .gallery-zoom:hover, .gallery-item .gallery-thumb .gallery-link:hover {
+    background: #FF8800; color:#ffffff;
+}
+.filter li a
+{
+    margin-left:0px;
+}
+.filter li:before
+{
+    content: "|";
+}
+#header-2 .main-nav .navbar-nav > li a {
+	font-size:90%;
+	letter-spacing:1px;
+}
+.bg-deepocean
+{
+    background-color: #3c3526 !important;
+}
+.btn.btn-primary {
+    background: #FF8800;
+    box-shadow: none;
+}

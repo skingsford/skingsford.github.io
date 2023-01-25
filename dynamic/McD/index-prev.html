@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>McDonald's CYT Ingredients | IMI International</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <style>
+    .slick-prev, .slick-prev *, .slick-next, .slick-next *
+        {
+            opacity:50% !important;
+        }
+    </style>
+</head>
+
+<body ng-app="cyt" ng-controller="cytController">
+
+<div class="headerBG"></div>
+
+<div class="total"><span style="font-size:75%; letter-spacing:1px;">TOTAL COST: $ </span>{{calcPrice().toFixed(2)}}</div>
+
+
+<div class="exceed">
+    Sorry, this selection<br>
+    would exceed the maximum<br>
+    allowance of this item.<br>
+    <span class="exceedClose">
+    	<strong ng-click="closeExceed()">CLOSE</strong>
+    </span>
+    </div>
+
+<img src="img/logo.png" class="maccasLogo" alt="McDonalds" title="">
+
+<div class="wrapper slider single-item">
+
+    <!--------------------------------------------------------------------------------------------->
+
+    <div class="slide">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="single"><img alt="Choose your Bun" title=""
+                                         src="img/your-ingredients-hdr-choose-your-bun.png"></div>
+                <p class="intro"><span class="noBreak">We’ve got just the bun for you </span>
+                    <span class="noBreak"> (even if you don’t like buns).</span></p>
+            </div>
+
+        </div>
+
+        <div class="row main">
+
+            <div std-item item="item" items="items" chosen="chosen" single-select="true" ng-repeat="item in items | filter : {type: 'bun'}"></div>
+
+        </div>
+
+    </div>
+
+    <!--------------------------------------------------------------------------------------------->
+
+    <div class="slide">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="single"><img alt="Make it cheesy" title=""
+                                         src="img/your-ingredients-hdr-make-it-chessy.png"></div>
+                <p class="intro"><span class="noBreak">A truly tasty selection</span>
+                    <span class="noBreak">for all the cheese lovers out there.</span></p>
+            </div>
+
+        </div>
+
+        <div class="row main">
+
+            <div std-item item="item" chosen="chosen" ng-repeat="item in items | filter : {type: 'cheese'}"></div>
+
+        </div>
+
+    </div>
+
+    <!--------------------------------------------------------------------------------------------->
+
+    <div class="slide">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="single"><img alt="Top It Off" title="" src="img/your-ingredients-hdr-top-it-off_0.png">
+                </div>
+                <p class="intro"><span class="noBreak">A range of special ingredients</span>
+                    <span class="noBreak">to give your burer the X factor.</span></p>
+            </div>
+
+        </div>
+
+        <div class="row main">
+
+            <div priced-item item="item" chosen="chosen" ng-repeat="item in items | filter : {type: 'extras'}"></div>
+
+        </div>
+
+    </div>
+
+    <!--------------------------------------------------------------------------------------------->
+
+    <div class="slide">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="single"><img alt="Top It Off" title="" src="img/your-ingredients-hdr-make-it-saucy.png">
+                </div>
+                <p class="intro"><span class="noBreak">Like a bit more flavour? You’re in luck.</span>
+                    <span class="noBreak">We’ve got 7 sauce options to choose from.</span></p>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div std-item item="item" chosen="chosen" ng-repeat="item in items | filter : {type: 'sauce'}"></div>
+
+        </div>
+
+    </div>
+
+    <!--------------------------------------------------------------------------------------------->
+
+    <div class="slide">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="single"><img alt="Top It Off" title="" src="img/your-ingredients-hdr-freshn-it-up.png">
+                </div>
+                <p class="intro"><span class="noBreak">Check out our fresh new range</span>
+                    <span class="noBreak">of gourmet salad ingredients.</span></p>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div std-item item="item" chosen="chosen" ng-repeat="item in items | filter : {type: 'salad'}"></div>
+
+        </div>
+
+    </div>
+    <div class="slide">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="single"><img alt="Top It Off" title="" src="img/your-ingredients-hdr-your-burger.png"></div>
+                <p class="intro"><span class="noBreak">You're Order</span>
+                    <span class="noBreak">of gourmet salad ingredients.</span></p>
+            </div>
+
+        </div>
+
+        <div class="row main">
+            <div report-item item="item" chosen="chosen" ng-repeat="item in items" ng-if="item.quantity > 0 || item.id == 'angusBeef'"></div>
+            <!--div std-item item="item" chosen="chosen" ng-repeat="item in items | filter : {id: chosen.bun}"></div>
+            <div std-item item="item" chosen="chosen" ng-repeat="item in chosen | filter : {id: chosen.bun}"></div-->
+
+        </div>
+
+    </div>
+
+    <!--------------------------------------------------------------------------------------------->
+
+</div>
+
+<div class="footerBG"></div>
+<div class="footerButtons">
+    <div class="footerBtn" ng-click="resetSlick()">START AGAIN</div>
+    <div class="footerBtn">REVIEW ORDER</div>
+    <div class="footerBtn">CHECKOUT</div>
+</div>
+
+
+<script src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.single-item').slick({
+            dots: true,
+            infinite: false
+        });
+    });
+</script>
+
+</body>
+</html>

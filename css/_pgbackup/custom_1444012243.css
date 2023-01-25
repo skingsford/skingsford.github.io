@@ -1,0 +1,19 @@
+
+
+#header-2 .main-nav .navbar-nav > li.active a
+{
+    color: #FF8800;
+}
+#header-2 .main-nav .navbar-nav > li a:hover
+{
+    color: #FF8800;
+}
+#header-2 .main-nav .nav .dropdown-menu a:hover
+{
+    background: #FF8800;
+    color: #fff;
+}
+#header-2 .main-nav .nav .dropdown-menu
+{
+    background: #3C2810;
+}

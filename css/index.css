@@ -1,0 +1,540 @@
+/* Start: Recommended Isotope styles */
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
+
+/**** Base styles ****/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, header, hgroup, 
+menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: 'LatoLight', Arial, sans-serif;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  padding: 0 20px;
+  font-family: 'LatoLight', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.7em;
+  background: #FFF;
+  color: #666;
+	text-align:center;
+}
+
+h1, h2, h3, p, ul, ol, pre, dl {
+  margin-bottom: 1.0em;
+}
+
+h1, h2, h3, h4, #super-list, .element, .tagline, #index-list, 
+.super-list .link {
+  font-family: 'LatoLight', Arial, sans-serif;
+  color: #F78F1E;
+}
+h1, h2, h3 { font-weight: normal; }
+
+h1 {
+  font-size: 32px;
+  line-height: 1.1em;
+}
+h2 {
+  font-size: 24px;
+  line-height: 1.1em;
+}
+ul, ol {
+  margin-left: 1.5em;
+}
+a,
+a code {
+  color: #FB4;
+  text-decoration: none;
+}
+li a:hover,
+a:hover code { 
+  color: #F78F1E !important;
+}
+li a:active,
+a:active code {
+  color: #F78F1E !important;
+}
+
+a img { border: none; }
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+blockquote {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  border-left: 1px solid #333;
+  font-style: italic;
+}
+.cleanList {
+  list-style:none; padding-left:0px; margin-left:0;
+  font-size:95%; line-height:150%;
+}
+#footLinks {
+  font-size: 13px;
+  border-top: 1px solid #aaa;
+  position:relative;
+  width:925px;
+  text-align:left;
+  margin: 0 auto;
+  padding:20px 20px 60px -50px;
+}
+.pantovideo {
+	position:absolute; 
+	width:375px; 
+	height:300px; 
+	margin-left:-65px !important; 
+}
+.pantoCornerMask {
+	background-color:#fff; 
+	width:50px !important;
+	height:20px !important;  
+	position:absolute; 
+	z-index:7; 
+	margin-top:0;
+}
+
+/**** Isotope styles ****/
+
+/* required for containers to inherit vertical size from window */
+html,
+body {
+  width:100%;
+  padding:0 20px;
+  margin:0;
+  text-align:center;
+  font-family: 'LatoLight', Arial, sans-serif;
+  overflow:auto;
+}
+
+#brand {
+  position:absolute; 
+  float:left; 
+  top:32px; 
+  margin-bottom:8px;
+  background-color:#FFF;
+}
+
+#content {
+  position:fixed;
+  background-color:#fff;
+  width:100%;
+  text-align:center;
+  zoom:1;
+  z-index:4;
+  padding-top:25px;
+  height:132px;
+}
+
+#options, #social, #container {
+  width:1000px;
+  margin: 0 auto;
+  padding: 5px 0;
+  margin-bottom: 20px;
+  text-align:center;
+}
+
+#container {
+  z-index:3; 
+  min-height:1240px;
+  position:absolute;
+  top:130px;
+	margin:auto;
+}
+
+#projectContent {
+  position:absolute;
+  margin:0 auto;
+  top:160px;
+  overflow: hidden;
+}
+.textLeft {
+  width: 300px;
+  position:relative;
+  margin: 0 15px 0 0;
+  float: left;
+  text-align:left;
+  background-color:#fff;
+  color: #222;
+}
+.width630 {
+  width: 630px;
+  position:relative;
+  float: left;
+}
+.width630 img {
+  width: 630px;
+  margin-bottom: 30px !important;
+  float: right;
+}
+
+#options {
+  width:1000px;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 20px;
+  text-align:center;
+}
+
+.element {
+  width: 300px;
+  height: 300px;
+  margin: 30px 30px 0 0;
+  float: left;
+  text-align:left;
+  overflow: hidden;
+  position: relative;
+  background: #BBB;
+  color: #222;
+ 
+}
+.caption {
+  /*width:270px;
+  height:155px !important;
+  padding:0 15px !important;
+  margin-top:-50px !important;
+  margin-left:0px;
+  text-align:center;
+  color:#fff;
+  font-family:'LatoRegular', Arial, Helvetica, sans-serif;
+  text-transform:uppercase;
+  font-size:15px;
+  zoom:1;
+  filter:alpha(opacity=.0); opacity:0; -moz-opacity:0;
+  filter:alpha(opacity=0) !important;
+  opacity:0 !important;
+  -moz-opacity:0 !important;*/
+  display:none;
+}
+.menus {
+  float:right; 
+  margin-right:37px;
+  margin-top:40px; 
+  text-align:right;
+}
+#filters {
+  float:right;
+  padding-right:3px;
+  margin-top:30px;
+  font-size:12px;
+  zoom:1;
+  z-index:6; 
+}
+#mainNav {
+  float:right; font-size:17px;
+}
+#topLine {
+  position:absolute; 
+  width:960px; 
+  margin:0 auto; 
+  top:101px; 
+  border-bottom:1px solid #AAA;
+}
+.overlay {
+	zoom:1.005;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+	filter:alpha(opacity=99);
+	opacity:.99;
+	margin:-1px 0 0 -1px;
+}
+.footerLeft {float:left;}
+.footerRight {float:right;}
+.footBold, .arbitraryBold {font-family: 'LatoBold';}
+.footReg, .arbitraryReg {font-family: 'LatoRegular';}
+
+/**** Media Queries restrict layout to 3 tiles wide ****/
+
+@media all and (max-width: 1020px) {
+
+#container {
+  margin-top:140px;
+}
+
+#content {
+  height:150px;
+}
+
+.menus {
+	position:absolute;
+	float:left !important;
+	text-align:left !important;
+	top:100px;
+	margin:0 0 0 -10px;
+}
+ul#mainNav {
+	float:left; margin-left:-7px; padding-left:0;
+}
+#filters {
+	float:left; margin:-5px 0 0 4px !important;
+}
+#options, #social, #container  {
+  width:680px;
+}
+#options {
+  text-align:left !important;
+}
+.width630 {
+  width: 100%;
+  float: left;
+  text-align:left;
+  padding:left:0px;
+  padding-right:0px;
+}
+.width630 img {
+  width: 100%;
+  margin-bottom: 30px !important;
+  float: left;
+}
+.textLeft {
+  position: relative;
+}
+#topLine {
+  position:absolute; 
+  width:635px; 
+  margin:0 auto; 
+  top:136px; 
+  border-bottom:1px solid #AAA;
+}
+}
+
+/**** Media Queries restrict layout to 2 tiles wide ****/
+
+@media all and (max-width: 680px) {
+body {
+  padding: 0 10px;
+}
+#options, #social, #container  {
+  width:500px;
+}
+.element {
+  position: absolute;
+  width:370px;
+  height:370px;
+  background-size: 370px 370px;
+}
+.element * {
+  position: absolute;
+  width:370px;
+  height:370px;
+  margin: 0;
+  left: 1px;
+  bottom: -1px;
+}
+#filters {
+  float:left; margin-right:30%;
+}
+#topLine {
+  position:absolute; 
+  width:370px; 
+  margin:0 auto; 
+  top:136px; 
+  border-bottom:1px solid #AAA;
+}
+.pantovideo {
+	width:462px; 
+	height:370px; 
+	margin:0 0 0 -70px;
+}
+.pantoCornerMask {
+	display:none; 
+}
+}
+
+/**** Media Queries restrict layout to 1 tile wide ****/
+
+@media all and (max-width: 500px) {
+body {
+  padding:0 5px;
+}
+.width630 {
+  width: 75%;
+}
+.dynamicCol {
+    width:440px; text-align:left;
+}
+}
+
+/**** Example Options ****/
+
+#options {
+  /*padding-bottom: 1.0em;*/
+}
+
+#options h3 {
+  margin-bottom: 0.2em;
+  font-size: 15px;
+}
+
+#options h4 { 
+  font-weight: bold;
+}
+
+#options ul {
+  margin: 0;
+  list-style: none;
+}
+
+#options ul ul {
+  margin-left: 1.5em;
+}
+
+#options li {
+  float: left;
+  margin-bottom: 0.2em;
+}
+
+#options li a {
+  display: block;
+  padding: 0.4em 0.5em;
+  color: #222;
+  /*background-color: #DDD;
+  font-weight: bold;
+  text-shadow: 0 1px hsla( 0, 0%, 100%, 0.5 );
+  background-image: -webkit-linear-gradient( top, hsla( 0, 0%, 100%, 0.5 ), hsla( 0, 0%, 100%, 0.0 ) );
+  background-image:    -moz-linear-gradient( top, hsla( 0, 0%, 100%, 0.5 ), hsla( 0, 0%, 100%, 0.0 ) );
+  background-image:     -ms-linear-gradient( top, hsla( 0, 0%, 100%, 0.5 ), hsla( 0, 0%, 100%, 0.0 ) );
+  background-image:      -o-linear-gradient( top, hsla( 0, 0%, 100%, 0.5 ), hsla( 0, 0%, 100%, 0.0 ) );
+  background-image:         linear-gradient( top, hsla( 0, 0%, 100%, 0.5 ), hsla( 0, 0%, 100%, 0.0 ) );
+}
+
+#options li a:hover {
+  background-color: #5BF;
+}
+
+#options li a:active {
+  background-color: #39D;
+  -webkit-box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+     -moz-box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+       -o-box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+          box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );*/
+}
+
+#options #filters li a {
+  /*border-left:  1px solid hsla( 0, 0%, 100%, 0.3 );
+  border-right: 1px solid hsla( 0, 0%,   0%, 0.2 );*/
+  text-transform:uppercase;
+}
+
+/*#options li:first-child a {
+  border-radius: 7px 0 0 7px;
+  border-left: none;
+}
+
+#options li:last-child a {
+  border-radius: 0 7px 7px 0;
+}*/
+
+#options li a.selected {
+  /*background-color: #13F;
+  text-shadow: none;
+  color: white;*/
+  font-family: 'LatoBold', Arial, sans-serif;
+  color: #F78F1E !important;
+}
+
+h3#options {
+  padding-bottom: 0;
+}
+
+/**** Infinite Scroll ****/
+
+#infscr-loading {
+  position: fixed;
+  text-align: center;
+  bottom: 30px;
+  left: 42%;
+  z-index: 100;
+  background: white;
+  background: hsla( 0, 0%, 100%, 0.9 );
+  padding: 20px;
+  color: #222;
+  font-size: 15px;
+  font-weight: bold;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+
+
+
+/* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
